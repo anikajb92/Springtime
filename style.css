@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Page Background */
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh;
+  background-image: url(./src/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px;
+}
+
+/* Main Container */
+
+.container {
+  position: relative;
+  width: calc(100% - 100px);
+  min-height: calc(100vh - 280px);
+  min-height: 300px;
+  background:rgba(255,255,255, 0.5); /* white background, low opacity */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* black shadow, very low opacity */
+  border-radius: 20px; /* Rounded borders */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+/* Header */
+
+header {
+  position: absolute;
+  top: -40px; /* position top of header to slightly higher than container */
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(255,255,255, 0.2); /* create a new glass layer behind header */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* black shadow, very low opacity */
+  border-radius: 20px;
+  backdrop-filter: blur(10px); /* creates blur effect of just the backdrop*/
+  border: 1px solid rgba(255,255,255, 0.25); /* very thin white border */
+  border-top: 1px solid rgba(255,255,255, 0.5); /* slightly thicker border on top */
+  border-left: 1px solid rgba(255,255,255, 0.5); /* and left */
+}
+
+header .logo {
+  color: #8a2435;
+  font-weight: 700;
+  text-decoration: none; /* removes underline */
+  font-size: 2em;
+}
+
+header ul {
+  display: flex; /* in-line li */
+}
+
+header ul li {
+  list-style: none; /* removes dots */
+  margin: 0 10px;
+}
+
+header ul li a {
+  text-decoration: none; /* removes underline */
+  font-weight: 500;
+  color: #8a2435;
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+header ul li a:hover, /* highlight feature over active and hover links*/
+header ul li a.active { 
+  background: #fff;
+  box-shadow: 0 5px rgba(0,0,0,0.1);
+}
+
+/* Welcome Card */
+.content {
+  transform: translateX(-100px); /* shifts outside of container frame to the left by 100px*/
+  max-width: 700px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1); /* black shadow, very low opacity */
+  border-radius: 20px;
+  backdrop-filter: blur(10px); /* creates blur effect of just the backdrop*/
+  border: 1px solid rgba(255,255,255, 0.25); /* very thin white border */
+  border-top: 1px solid rgba(255,255,255, 0.5); /* slightly thicker border on top */
+  border-left: 1px solid rgba(255,255,255, 0.5); /* and left */
+  padding: 40px;
+  padding-left: 110px;
+}
+
+.content h2 {
+  font-size: 3em;
+  color: #8a2435;
+}
+
+.content p {
+  font-size: 1.2em;
+  color: #8a2435;
+}
+
+.content a {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #fff;
+  color: #8a2435;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-decoration: none; /* removes underline */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Cartoon */
+.imageBox img {
+  max-width: 400px;
+  animation: animate 5s linear infinite;
+}
+@keyframes animate { /* Bounce cartoon image up and down */
+  0%, 100% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+}
+
+/* Social Media Icons */
+.social {
+  position: absolute;
+  right: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social li {
+  list-style: none; /* removes dots */
+}
+
+.social li a {
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* circle border */
+  margin: 5px 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.social li img.git {
+  padding: 3px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: center;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.social li a img {
+  transform: scale(0.75); /* Makes icon smaller in circle */
+  transition: 0.5s;
+}
+
+.social li:hover a img {
+  transform: scale(0.75) rotate(360deg);
+}
+
+.copyright {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: #8a2435;
+}
+
+@media (max-width: 1200px) {
+  
+}
