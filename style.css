@@ -190,6 +190,97 @@ header ul li a.active {
   color: #8a2435;
 }
 
+/* Desktop View Optimization */
 @media (max-width: 1200px) {
-  
+  .container {
+    position: relative;
+    width: calc(100% - 20%)
+  }
+}
+
+/* Tablet & Mobile View Optimization */
+@media (max-width: 1195px) {
+  section {
+    padding: 50px 10px 10px;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  .container .content {
+    transform: translateX(0px); /* Brings welcome section inside container bounds */
+    max-width: 100%;
+    padding: 30px;
+    margin-top: -40px; /* Arranges welcome section closer to header vertically */
+  }
+  /* Tablet and mobile view of header */
+  header {
+    position: relative;
+    flex-direction: column; /* Stacks name on top of ul */
+    width: 100%;
+    top: -60px;
+    padding: 20px;
+    right: 0; /* adds margins on right */
+    left: 0; /* keeps margins on right */
+  }
+  header ul {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center; /* rather than space-between on desktop */
+  }
+  header ul li {
+    margin: 2px; /* Mostly to give vertical space to menu items*/
+  }
+  header ul li a {
+    display: inline-block; /* prevent awkward stacking of menu items in tablet view */
+  }
+  /* Tablet & mobile view of graphics */
+  .imageBox {
+    margin-bottom: 50px;
+  }
+  /* Tablet & mobile view of welcome section */
+  .content a {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+  @keyframes animate { /* Tablet & mobile view: bounce cartoon image up and down only a little */
+    0%, 100% {
+      transform: translateY(-30px);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+  }
+  /* Tablet & mobile view of social icons */
+  .social {
+    position: relative; 
+    flex-direction: row; /* Move icons to bottom of container */
+    left: 0;
+  }
+  .social li a {
+    margin: 0 10px; /* Add spacing in between icons */
+  }
+  /* Tablet & mobile view of copyright */
+  .copyright {
+    position: relative;
+    bottom: initial; /* Add spacing from social */
+    left: inherit;
+    width: 100%;
+    color: #8a2435;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+ /* Mobile view */
+@media (max-width: 630px) {
+  .content h2 {
+    font-size: 1.5em;
+  }
+  .content p {
+    font-size: 1em;
+  }
+  .imageBox img {
+    max-width: 300px;
+  }
 }

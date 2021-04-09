@@ -1,6 +1,5 @@
 # Springtime
-## Table of Contents
-[Overview](# Overview)
+
 
 # Overview
-![GIF](https://media.giphy.com/media/xhSYLbdbkqD32UaCUw/giphy.gif)
+![GIF](https://media.giphy.com/media/15rKDg0Ac52E5yFfdA/giphy.gif)
